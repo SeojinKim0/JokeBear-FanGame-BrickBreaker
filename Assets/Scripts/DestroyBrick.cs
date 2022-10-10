@@ -6,9 +6,11 @@ public class DestroyBrick : MonoBehaviour
 {    
     [SerializeField] GameObject floor;
     private GenerateBrick generateScript;
+    private ScoreKeeper scoreKeeperScript;
 
     private void Start() {
         generateScript = floor.GetComponent<GenerateBrick>();
+        scoreKeeperScript = FindObjectOfType<ScoreKeeper>();
     }
 
 
@@ -21,7 +23,9 @@ public class DestroyBrick : MonoBehaviour
             // generateScript.brickSpawns.Remove(other.gameObject);
             // int index = generateScript.brickSpawns.IndexOf(other.gameObject);
             generateScript.brickSpawns.Remove(other.gameObject);
-            Destroy(other.gameObject);            
+            Destroy(other.gameObject);  
+            scoreKeeperScript.ModifyScore(1);
+            Debug.Log(scoreKeeperScript.GetScore());          
         }
         
     }
