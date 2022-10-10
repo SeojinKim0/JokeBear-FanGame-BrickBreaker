@@ -7,5 +7,4 @@
 This is a simple Brick Breaker game.
 This game can be played [here](https://sjk0.itch.io/joke-bear-brick-breaker-fangame)
 
-Game Preview:
 ![](https://github.com/SeojinKim0/JokeBear-FanGame-BrickBreaker/blob/main/PlayGIF.gif)
